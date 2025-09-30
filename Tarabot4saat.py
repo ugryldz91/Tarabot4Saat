@@ -213,8 +213,8 @@ async def send_telegram(text: str) -> None:
 
 def format_message(pairs: List[Tuple[str,float]], scanned: int) -> str:
     if not pairs:
-        return f"Bugün kriterlere uygun coin bulunamadı.\nTaranan toplam coin: {scanned}"
-    lines = [f"Kriterlere uyan coinler (RSI) — Taranan toplam coin: {scanned}"]
+        return f"(4s) Kriterlere uygun coin bulunamadı.\nTaranan toplam coin: {scanned}"
+    lines = [f"(4s) Kriterlere uyan coinler (RSI) — Taranan toplam coin: {scanned}"]
     for sym, r in pairs:
         lines.append(f"- {sym}: RSI={r}")
     return "\n".join(lines)
