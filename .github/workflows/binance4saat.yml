@@ -17,4 +17,4 @@ jobs:
       - name: Install dependencies
         run: pip install aiohttp pandas numpy
       - name: Run scanner
-        run: python your_script_name.py
+        run: python Tarabot4saat.py
