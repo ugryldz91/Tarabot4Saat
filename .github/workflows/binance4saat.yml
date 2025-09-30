@@ -1,0 +1,20 @@
+name: Binance Scanner
+
+on:
+  schedule:
+    - cron: "3 0,4,8,12,16,20 * * *"   # TR saatiyle 03:03, 07:03, 11:03, 15:03, 19:03, 23:03
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install aiohttp pandas numpy
+      - name: Run scanner
+        run: python your_script_name.py
